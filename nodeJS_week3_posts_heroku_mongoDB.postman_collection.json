@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "95b412f2-2974-49e3-aeef-2095f58c3365",
+		"name": "nodeJS_week3_posts_heroku_mongoDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19883143"
+	},
+	"item": [
+		{
+			"name": "取得所有貼文資料",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pacific-sands-56986.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"pacific-sands-56986",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增一筆貼文資料",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Bob\",\r\n    \"content\": \"內容測試1\",\r\n    \"tags\": \"搞笑, 謎因\",\r\n    \"type\": \"group\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{posts_API}}/posts",
+					"host": [
+						"{{posts_API}}"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "修改一筆貼文內容",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"小明\",\r\n    \"content\": \"內容測試使用\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{posts_API}}/posts/637f4eabc5d5b147119cfb98",
+					"host": [
+						"{{posts_API}}"
+					],
+					"path": [
+						"posts",
+						"637f4eabc5d5b147119cfb98"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除一筆貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{posts_API}}/posts/637f3a0ecc19d331e1c5349d",
+					"host": [
+						"{{posts_API}}"
+					],
+					"path": [
+						"posts",
+						"637f3a0ecc19d331e1c5349d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除所有貼文內容",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{posts_API}}/posts",
+					"host": [
+						"{{posts_API}}"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
